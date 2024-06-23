@@ -3,7 +3,7 @@ Resources:
   CostAndUsageReportDefinition:
     Type: 'AWS::CUR::ReportDefinition'
     Properties:
-      ReportName: 'YourCURReport2'
+      ReportName: 'YourCURReport'
       TimeUnit: 'HOURLY'
       Format: 'Parquet'
       Compression: 'Parquet'
