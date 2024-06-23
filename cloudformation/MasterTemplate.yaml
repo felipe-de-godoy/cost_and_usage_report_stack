@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  CostAndUsageReportDefinition:
+    Type: 'AWS::CUR::ReportDefinition'
+    Properties:
+      ReportName: 'YourCURReport2'
+      TimeUnit: 'HOURLY'
+      Format: 'Parquet'
+      Compression: 'Parquet'
+      S3Bucket: 'your-cur-reports-bucket-fg'
+      S3Prefix: 'cur-reports/'
+      S3Region: 'us-east-1'
+      AdditionalSchemaElements:
+        - RESOURCES
+      AdditionalArtifacts:
+        - ATHENA
+      RefreshClosedReports: true
+      ReportVersioning: 'OVERWRITE_REPORT'
+
+  GlueDatabase:
+    Type: 'AWS::Glue::Database'
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Name: 'yourcurreport'
