@@ -41,7 +41,7 @@ Use AWS CLI to deploy the master template:
 
 ```bash
 
-aws cloudformation create-stack --stack-name your-cur-stack2 --template-body file://cloudformation/MasterTemplate.yaml --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation create-stack --stack-name your-cur-stack --template-body file://cloudformation/MasterTemplate.yaml --capabilities CAPABILITY_NAMED_IAM
 
 ```
 
