@@ -3,10 +3,7 @@
 ## Folder Structure
 
 ```
-
-project_folder
-
-project_folder
+cost_and_usage_report_stack
 │
 ├── cloudformation
 │ ├── MasterTemplate.yaml # Combined CloudFormation template
@@ -23,9 +20,7 @@ project_folder
 Before you start, ensure you have:
 
 - An AWS account
-
 - AWS CLI installed and configured
-
 - Appropriate permissions to create AWS resources (S3, Athena, Glue, CUR)
 
 ## Deployment Steps
